@@ -1,0 +1,977 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 99999;
+  background-color: rgba(69, 130, 255, 0.8);
+  border: none;
+}
+#btn-back-to-top:hover {
+  
+  background-color: rgba(69, 130, 255, 1);
+}
+.search-button{
+  outline: none;
+  background: none;
+  border: none;
+}
+.search-button i::before{
+  font-size: 24px;
+}
+/* #myMenu{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+}
+#myMenu li{
+  list-style: none;
+}
+.myMenuLi{
+  text-decoration: none;
+  color: #0a0a0a;
+  font-size: 1rem;
+} */
+.modal-header{
+  border-bottom: none;
+}
+.modal-body input{
+  width: 100%;
+  padding: 8px ;
+
+}
+.modal-footer{
+  border-top: none;
+  justify-content: center;
+}
+.modal-footer .custom-button{
+  width: 100%;
+  padding: 8px;
+}
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+.navbar-toggler:focus{
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: #0a0a0a;
+  border-radius: 2px;
+  display: block;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+#hamburger-6.is-active {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition-delay: 0.6s;
+  -o-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#hamburger-6.is-active .line:nth-child(2) {
+  width: 0px;
+}
+
+#hamburger-6.is-active .line:nth-child(1),
+#hamburger-6.is-active .line:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+#hamburger-6.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(7px);
+  -ms-transform: translateY(7px);
+  -o-transform: translateY(7px);
+  transform: translateY(7px);
+}
+
+#hamburger-6.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-9px) rotate(90deg);
+  -ms-transform: translateY(-9px) rotate(90deg);
+  -o-transform: translateY(-9px) rotate(90deg);
+  transform: translateY(-9px) rotate(90deg);
+}
+.nav-bg {
+  background-color: #ffffff !important;
+  -webkit-box-shadow: inset 0px -5px 5px -4px rgba(69, 130, 255, 0.1);
+  -moz-box-shadow: inset 0px -5px 5px -4px rgba(69, 130, 255, 0.1);
+  box-shadow: inset 0px -5px 5px -4px rgba(69, 130, 255, 0.1);
+  padding: 0.5rem 0;
+}
+@media only screen and (max-width:480px){
+  .navbar-brand img{
+    width: 200px;
+  }
+}
+.top-nav-bg {
+  background-color: rgba(69, 130, 255, 0.8);
+}
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+@media only screen and (max-width: 480px) {
+  .top-nav {
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
+.top-nav i::before {
+  font-size: 1.125rem;
+  color: #fff;
+}
+.top-nav-left,
+.top-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media only screen and (max-width: 480px) {
+  .top-nav-left,
+  .top-nav-right {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+}
+.top-nav-text {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.top-nav-text a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.social {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.social-links {
+  line-height: 1;
+}
+.social-links i::before {
+  font-size: 1.125rem;
+}
+.nav-link {
+  color: #0a0a0a;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.5rem 1rem !important;
+}
+.nav-link:hover {
+  color: #d887d0;
+}
+@media only screen and (max-width: 1080px) {
+  .nav-link {
+    padding: 0.5rem !important;
+  }
+}
+.dropdown:hover .dropdown-menu {
+  /* display: block !important; */
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0.75rem 1rem !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+  -webkit-box-shadow:rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+    -moz-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+      rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+}
+.dropdown-menu {
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0.75rem 1rem !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+  -moz-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+}
+
+.dropdown-item {
+  font-size: 1rem !important;
+  font-weight: 500;
+}
+.dropdown-item:hover {
+  background-color: #fff;
+  color: #d887d0;
+  font-weight: 600;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+.events {
+  font-size: 60px;
+}
+@media only screen and (max-width: 768px) {
+  .events {
+    font-size: 36px;
+  }
+}
+.saricizgi {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.onyazi {
+  border-radius: 4px;
+}
+.neler-yapıyoruz {
+  font-size: 55px;
+  font-family:'Bagel Fat One', cursive;;
+  letter-spacing: 2;
+  color: #ff00ff;
+  
+  /* font-family: "Open Sans"; */
+  /* letter-spacing: -1.5px; */
+  /* font-weight: 700; */
+  /* color: #42495b; */
+  /* font-family: "Montserrat"; */
+}
+@media only screen and (max-width:480px){
+  .neler-yapıyoruz{
+    font-size: 36px;
+  }
+}
+
+.paragraf {
+  font-size: 16px;
+  font-family: "Open Sans";
+  color: grey;
+  line-height: 30px;
+  margin: 0 0 25px;
+  margin-bottom: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Neler Yapıyoruz */
+
+.card-title {
+  color: #4582ff;
+  font-size: 19.992px;
+  line-height: 1.3;
+  margin: 0 0 20px;
+  letter-spacing: -0.5px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  
+  /*Neler Yapıyoruz */
+}
+.card-title:hover{
+    color: #ffb34f;
+  transition: 0.3s;
+}
+/*Farkımız Nedir */
+
+.farkımız-nedir-img img {
+  border: 13px solid;
+  border-image: linear-gradient(transparent 0%, #d887d0 0% 90%, #d887d0 24% 70%)
+    0 1 1 0 / 55px;
+  height: auto;
+  max-width: 95%;
+  vertical-align: middle;
+}
+
+.farkımız-nedir h2 {
+  padding-top: 15px;
+  font-size: 55px;
+  color: #42495b;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 20px;
+  letter-spacing: -1.5px;
+}
+@media only screen and (max-width: 1200px) {
+  .farkımız-nedir h2 {
+    font-size: 3rem;
+  }
+}
+
+.farkımız-paragraf {
+  font-size: 14px;
+  color: gray;
+  margin: 0 0 25px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.neden-tercih {
+  padding-top: 15px;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #42495b;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 20px;
+  letter-spacing: -1px;
+  max-width: 530px;
+  margin: 0 0 25px;
+  display: flex;
+  justify-items: center;
+  text-align: center;
+}
+
+.neden-tercih-paragraf {
+  font-size: 14px;
+  color: gray;
+  margin: 0 0 25px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.egitim-kadro-button {
+  background-color: #4582ff;
+  display: flex;
+  justify-content: center;
+  transition: all ease 0.3s;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  padding: 15px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+@media only screen and (max-width: 768px) {
+  .egitim-kadro-button {
+    margin: auto 1rem;
+    text-align: center;
+  }
+}
+
+.egitim-kadro-button a {
+  text-decoration: none;
+  color: white;
+}
+.egitim-kadro-button a:hover {
+  color: #ffb34f;
+  transition: 0.2s;
+}
+/* End Farkımız Nedir */
+
+/* Destek Eğitim Programlarımız */
+
+.morcizgi {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.destek-egitim h2 {
+  text-align: center;
+  font-size: 55px;
+  color: #42495b;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 20px;
+  letter-spacing: -1.5px;
+}
+@media only screen and (max-width: 768px) {
+  .destek-egitim h2 {
+    font-size: 36px;
+  }
+}
+
+.destek-egitim-paragraf {
+  font-size: 0.875rem;
+  color: gray;
+  margin: 30px 0;
+  line-height: 30px;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+@media only screen and (max-width: 480px) {
+  .destek-egitim-paragraf {
+    padding: 0 0.875rem 0;
+    text-align: justify;
+  }
+}
+.destek-egitim-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.destek-egitim-img img {
+  border-radius: 4px;
+  box-shadow: none;
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+  margin-bottom: 0;
+
+}
+
+.destek-egitim-yazi a {
+  text-decoration: none;
+  transition: all ease 0.3s;
+  font-size: 22px;
+  color: #42495b;
+  line-height: 26px;
+  font-weight: 600;
+  margin-right: 0px;
+  letter-spacing: -0.5px;
+  display: block;
+}
+@media only screen and (max-width: 480px) {
+  .destek-egitim-yazi a {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+.bg-image {
+  background-image: url("../img/whyBg.webp");
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.destek-egitim-yazi a:hover {
+  color: #4582ff;
+  transition: 0.2s;
+}
+
+/* END Destek Eğitim Programlarımız */
+
+/* sizden gelenler */
+
+.sizdengelen {
+  position: relative;
+  top: 450px;
+  font-size: 50px;
+  color: 42495b;
+}
+
+.bg-pink {
+  background-color: #ff00ff;
+  width: auto;
+  padding: 30px 0 80px;
+}
+
+
+.etkinlik {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 50px 0 30px ;
+}
+
+.event-card-img h4{
+  position: absolute;
+  height: 100%;
+  /* left: 15px; */
+  display: flex;
+  flex-direction: column;
+  bottom: 0px;
+  justify-content: end;
+  /* margin: auto; */
+  color: white;
+  margin: 0;
+  padding: 25px;
+  font-size: 20px;
+  width: 100%;
+  font-family: "Montserrat";
+  font-weight: 400;
+  background: -webkit-linear-gradient(top, rgba(255,0,0,0), rgb(18, 44, 74));
+
+
+         
+}
+
+.event-card img{
+  
+  /*border-image: linear-gradient(transparent 0%, #4582ff 0% 90%, #4582ff 24% 70%) 0 1 1 0 / 55px;*/
+  transition: 0.5s ease-in;
+
+ 
+}
+
+ 
+
+
+.event-card img:hover{
+  transform: scale(1.1);
+
+}
+.event{
+display: flex;
+justify-content: space-between;
+overflow: hidden;
+margin: 0;}
+
+
+.custom-button span:hover{
+  color: #ffb34f;
+  transition: 0.2s;
+
+}
+.event-card{
+  margin-bottom: 1.5rem;
+}
+@media only screen and (max-width:480px){
+  .event-card{
+    margin-bottom: 1rem;
+  }
+}
+
+.detaylıbilgi {
+  border-radius: 5px;
+  text-shadow: 42495b;
+  position: relative;
+  top: 600px;
+  text-align: center;
+}
+
+.custom-button {
+  background-color: #0077cc;
+  color: #ffffff;
+  border: none;
+  padding: 15px 50px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+@media only screen and (max-width:480px){
+  .custom-button{
+    margin: 0 1rem;
+  }
+}
+
+.TANITIM {
+   color: #fff;
+  /* background-image: url("../img/tanıtım-videosu.jpg");  */
+  background-image: url("../img/home-video-tr.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  width: 100%;
+  height: auto;
+  
+}
+.tanitim-area{
+  padding: 8rem 0 ;
+}
+  
+
+
+
+
+
+
+@media only screen and (max-width:480px) {
+  .tanitim-area{
+    padding: 10rem 3rem;
+  }
+}
+.bilgi-bankası {
+  font-size: 36px;
+  letter-spacing: -1.5px;
+  color: #42495b;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.alt-resim {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: 0;
+}
+.alt-resim img {
+  transition: 0.2s ease-in;
+}
+
+.alt-resim img:hover{
+  transform: scale(1.1);
+  
+}
+
+.bilgi-bankası-button {
+  background-color: #0077cc;
+  color: #ffffff;
+  border: none;
+  padding: 15px 50px;
+  font-size: 16px;
+  border-radius: 5px;
+  position: relative;
+  top: 100px;
+}
+
+footer {
+  /* background-color: #151948; */
+  background-color: #252438;
+  color: #fff;
+  font-size: 16px;
+  padding: 3rem 0 0;
+}
+.footer-bottom-text{
+  padding: 2rem 0;
+  border-top:2px solid #42495b;
+  width: 100%;
+}
+/* .container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 40px;
+} */
+.help-links li{
+  font-size: "Open Sans";
+  font-weight: 600;
+
+}
+.contact-info,
+.help-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 3px;
+}
+
+.contact-info li,
+.help-links li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  
+}
+
+.contact-info li i,
+.help-links li a {
+  color: #c1c2d0;;
+  font-size: 15px;
+}
+
+.contact-info li:last-child,
+.help-links li:last-child {
+  margin-bottom: 0;
+}
+.help-links a {
+  text-decoration: none;
+}
+.help-links a:hover {
+  text-decoration: none;
+  color: #ffb34f;
+  transition: 0.3s;
+}
+
+footer h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+}
+.p-4 {
+  padding: 0 4rem;
+}
+@media only screen and (max-width: 1450px) {
+  .p-8 {
+    padding: 0 8rem;
+  }
+  .card-title {
+    font-size: 15.992px;
+  }
+}
+@media only screen and (max-width: 1210px) {
+  .card-mobile {
+    min-width: 245px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .p-4 {
+    padding: 0 2rem;
+  }
+  .card-mobile {
+    min-width: 100%;
+  }
+  .farkımız-paragraf {
+    padding: 0 0.875rem 0;
+    text-align: justify;
+  }
+  .farkımız-nedir h2 {
+    padding: 1rem 0 0 1rem;
+    font-size: 36px;
+  }
+  .neden-tercih-paragraf,
+  .neden-tercih {
+    padding: 0 0.875rem 0;
+    text-align: justify;
+  }
+}
+.slider-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+.control-next,
+.carousel-control-prev {
+  width: 10%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  opacity: 0.7;
+}
+.splide{
+  max-width: 50rem;
+}
+
+.slider-items {
+  display: block;
+  width: 100%;
+  min-height: auto;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.each-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 6rem;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0,1);
+      -moz-box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0,1);
+      box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0,1);
+}
+@media only screen and (max-width:480px){
+  .each-slider{
+    padding: 3rem;
+  }
+    .each-slider p {
+      font-size: 16px;
+    }
+}
+.each-slider p{
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: gray;
+  text-align: justify;
+  
+}
+@media only screen and (max-width:480px) {
+  .each-slider p {
+    font-size: 16px;
+  }
+}
+.slider-user{
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width:480px) {
+  .slider-user { 
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+.user-info{
+  display: flex;
+  gap:1.375rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+
+}
+.user-info img{
+  border-radius: 50%;
+}
+.username{
+      font-weight: 700;
+        font-size: 18px;
+        color: #42495b;
+        letter-spacing: 1.1px;
+}
+.user-partner{
+      color: #a0a0a0;
+        font-size: 18px; 
+        letter-spacing: 1.1px;
+}
+.stars-info{
+  display: flex;
+  flex-direction: row;
+  gap: 0.375rem;
+  filter: drop-shadow(3px 3px 5px #000);
+}
+.splide__pagination{
+  display: none;
+}
+.splide__arrow{
+  background-color: #ffffff;
+  border: 2px solid #ffb34f;
+  border-radius: 5px;
+  width: 3em;
+  height: 3em;
+  padding: 5px;
+}
+@media only screen and (max-width:480px){
+  .splide__arrow{
+    width: 1.75em;
+    height: 1.75em;
+    padding: 8px;
+  }
+    .splide__arrow--next{
+      right: 0;
+    }.splide__arrow--prev{
+      left: 0;
+    }
+}
+.splide__arrow:hover{
+  background-color: #ffb34f;
+}
+.from-you-img{
+  background-image: url("../img/sizdengelenler.png");
+  width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    position: relative;
+}
+.empty-line{
+  display: inline-block;
+  width: 100%;
+  height: 8rem;
+}
+@media only screen and (max-width:480px){
+  .contact-info,
+    .help-links{
+      grid-template-columns: repeat(1, 1fr);
+    }
+        footer{
+          padding:0 1rem;
+        }
+    footer h4{
+      margin-top: 16px;
+    }
+}
+@media only screen and (max-width:768px){
+  .destek-egitim-yazi a{
+    padding: 1rem 0 0;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+#searchResult li{
+  list-style: none;
+}
+
+.alt-resim{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.child{
+  position: absolute;
+  width: 51%;
+  height: 30%;
+  bottom: 0;
+  left: 0;
+  background-color: #f7f7f7;
+  color: gray;
+  text-align: center;
+  padding: 40px 27px 50px;
+}
+
+.child a{
+  text-decoration: none;
+  font-weight: 600;
+  color: #42495B;
+  letter-spacing: -1px;
+  font-size: 24px;
+  font-family: "Montserrat";
+}
+.child a:hover{
+  transition: all ease .3s;
+  color: #FF9900;
+}
+
+
+.childd{
+  position: absolute;
+  width: 51%;
+  height: 30%;
+  bottom: 0;
+  left: 0;
+  background-color: #f7f7f7;
+  color: gray;
+  text-align: center;
+  padding: 40px 27px 50px;
+}
+.childd a{
+  text-decoration: none;
+  font-weight: 600;
+  color: #42495B;
+  letter-spacing: -1px;
+  font-size: 24px;
+  font-family: "Montserrat";
+
+}
+.childd a:hover{
+  transition: all ease .3s;
+  color: #FF9900;
+}
+
+

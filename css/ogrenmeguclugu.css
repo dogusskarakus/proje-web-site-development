@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+
+
+.top-nav-bg{
+    background-color: #ffb34f;
+}
+
+.top-nav{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+@media only screen and (max-width:480px){
+    .top-nav{
+        gap: 1rem;
+        flex-direction: column;
+    }
+}
+
+.top-nav i::before{
+    font-size: 1.125rem;
+    color: #fff;
+}
+
+.top-nav-left, .top-nav-right{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+@media only screen and (max-width:480px){
+    .top-nav-left, .top-nav-right{
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+}
+.top-nav-text{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.top-nav-text a{
+    color: #fff;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 500;
+}
+.social{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #fff;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.social-links{
+    line-height: 1;
+}
+.social-links i::before{
+    font-size: 1.125rem;
+}
+
+
+.nav-link{
+    color: #42495b;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 1rem !important;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+    border: none;
+    border-radius: 0;
+    padding:.75rem 1rem !important;
+}
+.dropdown-item{
+    font-size: 1rem !important;
+    font-weight: 500;
+}
+.dropdown-item:hover{
+    background-color: #fff;
+    color: #d887d0;
+    font-weight: 600;
+}
+@keyframes fadeInUp{
+    0% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 10%, 0);
+            transform: translate3d(0, 10%, 0);
+        }
+    
+        100% {
+            opacity: 1;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+}
+
+
+.slider {
+    background-color: #f8f8f8;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider-text {
+    text-align: center;
+    color: #333;
+
+  }
+  
+  .slider-text h2 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+    font-weight: 700;
+    color: #42495b;
+    font-family: "Montserrat";
+
+  }
+
+  .breadcrumb{
+    display:inline-flex;
+    padding: 10px;
+}
+.breadcrumb-item a{
+text-decoration: none;
+color: #42495b;
+font-size: 14px; 
+font-family: "Open Sans";
+font-weight: 600;
+}
+
+.breadcrumb a:hover {
+  color:#ffb34f;
+}
+
+ .ogrenme-guclugu-img img{
+    height: auto;
+    max-width: 100%;
+    margin-top: 100px;
+ }
+
+ .ogrenme-guclugu-nedir{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #42495b;
+    font-size: 37.966px;
+    font-family: 'montserrat', sans-serif;
+
+ }
+
+ .ogrenme-paragraf{
+    margin: 0 0 25px;
+    font-size: 14px;
+    font-family: "Open Sans"; 
+    color: grey;
+    line-height: 2;
+
+ }
+
+ .ogrenme-baslık {
+
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin: 0 0 20px;
+    color: #42495b;
+    font-size: 28px;
+    font-family: 'montserrat';
+
+ }
+
+ ul li {
+  margin: 0 0 15px;
+  font-size: 14px;
+  font-family: "Open Sans"; 
+  color: grey;
+}
+
+
+/* Sidebar */
+
+#sidebar {
+  width: 100%;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 100px;
+  margin: 0px;
+}
+
+#sidebar .widget.widget_search {
+border-radius: 5px;
+background-color: #4582ff;
+overflow: hidden;
+}
+.arama-yap{
+
+  font-size: 24px;
+  color: white;
+  background-color: #4582ff;
+  padding: 19px 32px;
+  margin: 0;
+  border: 0;
+}
+.anahtar-kelime{
+
+padding: 19px 0px 19px 28px;
+height: 18px;
+width: 100%;
+border: none;
+
+color: white;
+font-weight: 500;
+background-color: transparent;
+border-radius: 0;
+outline: none;
+}
+
+
+.anahtar-kelime::placeholder{
+color: white;
+font-size: 15px;
+border: 0;
+}
+
+
+.hizmetlerimiz{
+background-color: #4582ff;
+font-size: 25px;
+color: white;
+padding: 19px 32px;
+margin-left: 21px;
+font-weight: 700;
+line-height: 1.25;
+height: 70px;
+padding-left: 30px;
+
+}
+
+.menu-hizmetlerimiz{
+padding: 8px 12px;
+list-style: none;
+margin: 0 0 20px 20px;
+padding-left: 0 ;
+padding-right: 0;
+padding-top: 0 !important;  
+}
+.hizmetlerimiz-liste{
+color: gray;
+background-color: #f8f8f8;
+font-size: 14px;
+font-family: "Open Sans";
+padding: 13px 20px;
+line-height: 4;
+}
+.liste {
+border-bottom: 1px solid #e6e6e6;
+}
+
+.bilgi-bankası{
+
+font-size: 25px;
+color: white;
+background-color: #4582ff;
+padding: 19px 32px;
+margin: 0;
+border: 0;
+margin-left: 20px;
+font-weight: 700;
+
+}
+.menu-bilgibankası{
+padding: 8px 12px;
+list-style: none;
+margin: 0 0 20px 20px;
+padding-left: 0 ;
+padding-right: 0;
+padding-top: 0 !important;  
+
+}
+.bilgibankası-liste{
+color: gray;
+background-color: #f8f8f8;
+font-size: 14px;
+font-family: "Open Sans";
+padding: 13px 20px;
+line-height: 4;
+
+}
+
+.text a{
+color:#42495b; 
+font-size: 16px; 
+line-height: 24px; 
+margin: 0 0 3px; 
+letter-spacing: -1px; 
+font-family: "Montserrat"; 
+font-weight: 700;
+padding-left: 15px;
+line-height: 1.5;
+display: flex;
+text-decoration: none;
+
+}
+
+.menu-bilgibankası li{
+border-bottom: 1px solid white;
+padding-bottom: 15px;
+}
+.text{
+margin: auto 0;
+}
+.post-date{
+padding-left: 15px;
+line-height: 2;
+
+}
+
+
+.liste a:hover {
+color:#ffb34f;
+transition: 0.2s;
+
+}
+.liste a{
+text-decoration: none;
+color: gray;
+font-size: 14px; 
+font-family: "Open Sans";
+}
+.text a:hover {
+  color:#ffb34f;
+  transition: 0.2s;
+
+}
+
+
+/* ENDSidebar */
+
+
+
+
+ /* Footer */
+
+ footer {
+  background-color: #151948;
+  color: #fff;
+  font-size: 16px;
+  padding: 3rem 0 0;
+}
+.footer-bottom-text{
+  padding: 2rem 0;
+  border-top:2px solid #42495b;
+  width: 100%;
+}
+/* .container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 40px;
+} */
+.help-links li{
+  font-size: "Open Sans";
+  font-weight: 600;
+
+}
+.contact-info,
+.help-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 3px;
+}
+
+.contact-info li,
+.help-links li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #c1c2d0;
+
+  
+}
+
+.contact-info li i,
+.help-links li a {
+  color: #c1c2d0;
+  font-size: 14px;
+}
+
+.contact-info li:last-child,
+.help-links li:last-child {
+  margin-bottom: 0;
+}
+.help-links a {
+  text-decoration: none;
+}
+.help-links a:hover {
+  text-decoration: none;
+  color: #ffb34f;
+  transition: 0.3s;
+}
+
+footer h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+}
+.p-4 {
+  padding: 0 4rem;
+}
+@media only screen and (max-width: 1450px) {
+  .p-8 {
+    padding: 0 8rem;
+  }
+  .card-title {
+    font-size: 15.992px;
+  }
+}
+@media only screen and (max-width: 1210px) {
+  .card-mobile {
+    min-width: 245px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .p-4 {
+    padding: 0 2rem;
+  }
+  .card-mobile {
+    min-width: 100%;
+  }
+  .farkımız-paragraf {
+    padding: 0 0.875rem 0;
+    text-align: justify;
+  }
+  .farkımız-nedir h2 {
+    padding: 1rem 0 0 1rem;
+    font-size: 36px;
+  }
+  .neden-tercih-paragraf,
+  .neden-tercih {
+    padding: 0 0.875rem 0;
+    text-align: justify;
+  }
+}
+.slider-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  width: 10%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  opacity: 0.7;
+}
+.splide{
+  max-width: 50rem;
+}
+.slider-items {
+  display: block;
+  width: 100%;
+  min-height: auto;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.each-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 6rem;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0,1);
+      -moz-box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0,1);
+      box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0,1);
+}
+@media only screen and (max-width:480px){
+  .each-slider{
+    padding: 3rem;
+  }
+    .each-slider p {
+      font-size: 16px;
+    }
+}
+.each-slider p{
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #c1c2d0;
+  text-align: justify;
+  
+}
+@media only screen and (max-width:480px) {
+  .each-slider p {
+    font-size: 16px;
+  }
+}
+.slider-user{
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width:480px) {
+  .slider-user { 
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+.user-info{
+  display: flex;
+  gap:1.375rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+
+}
+.user-info img{
+  border-radius: 50%;
+}
+.username{
+      font-weight: 700;
+        font-size: 18px;
+        color: #42495b;
+        letter-spacing: 1.1px;
+}
+.user-partner{
+      color: #a0a0a0;
+        font-size: 18px; 
+        letter-spacing: 1.1px;
+}
+.stars-info{
+  display: flex;
+  flex-direction: row;
+  gap: 0.375rem;
+  filter: drop-shadow(3px 3px 5px #000);
+}
+.splide__pagination{
+  display: none;
+}
+.splide__arrow{
+  background-color: #ffffff;
+  border: 2px solid #ffb34f;
+  border-radius: 5px;
+  width: 3em;
+  height: 3em;
+  padding: 5px;
+}
+@media only screen and (max-width:480px){
+  .splide__arrow{
+    width: 1.75em;
+    height: 1.75em;
+    padding: 8px;
+  }
+    .splide__arrow--next{
+      right: 0;
+    }.splide__arrow--prev{
+      left: 0;
+    }
+}
+.splide__arrow:hover{
+  background-color: #ffb34f;
+}
+.from-you-img{
+  background-image: url("../img/sizdengelenler.png");
+  width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    position: relative;
+}
+.empty-line{
+  display: inline-block;
+  width: 100%;
+  height: 8rem;
+}
+@media only screen and (max-width:480px){
+  .contact-info,
+    .help-links{
+      grid-template-columns: repeat(1, 1fr);
+    }
+        footer{
+          padding:0 1rem;
+        }
+    footer h4{
+      margin-top: 16px;
+    }
+}
+@media only screen and (max-width:768px){
+  .destek-egitim-yazi a{
+    padding: 1rem 0 0;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+#searchResult li{
+  list-style: none;
+}
